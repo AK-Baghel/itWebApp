@@ -34,6 +34,17 @@ function Menu() {
     }, [menuShow]);
 
 
+    const [searchToggle, setSearchToggle] = useState(true)
+
+    useEffect(() => {
+        if (!searchToggle) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+    });
+
+
 
     return (
         <div className={`menuContainer ${menuShow ? 'menuContainerScrollUp' : ""}`}>
@@ -47,12 +58,12 @@ function Menu() {
                 <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>Services</div>
                 <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>Services</div>
                 <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>Services</div>
-                <IoClose className=" menuBar menuCross" onClick={toggleBar} />
+                <IoClose className=" menuBar menuCross" onClick={() => { toggleBar(); setSearchToggle(!searchToggle) }} />
             </div>
 
 
 
-            <FaBars className="menuBar" onClick={toggleBar} />
+            <FaBars className="menuBar" onClick={() => { toggleBar(); setSearchToggle(!searchToggle) }} />
 
 
 
