@@ -5,14 +5,14 @@
     height: 10vh;
     top: 7vh;
     z-index: 9;
-    background-color: rgba(0, 0, 0, 0.644);
+    /* background-color: rgba(0, 0, 0, 0.644); */
 }
 
 .menuContainerScrollUp {
     transition: all 0.5s ease-in;
     position: fixed;
     top: 0vh;
-    background-color: rgba(0, 0, 0, 0.644);
+    background-color: rgba(0, 0, 0, 0.733);
 
 }
 
@@ -69,4 +69,52 @@
 
 .active {
     color: rgb(255, 217, 0);
+}
+
+.menuBar {
+    font-size: 1.8rem;
+    display: none;
+}
+
+.menuCross {
+    font-size: 2.8rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 2.5rem;
+}
+
+
+@media (max-width:850px) {
+    .menuBar {
+        display: block;
+    }
+
+    .menuContainer {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .menuItems {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #021020;
+        /* background-color: #4D8DDD; */
+        width: 100vw;
+        height: 100vh;
+        gap: 3rem;
+        align-items: flex-start;
+        padding-inline: 2rem;
+        transition: all 1s ease;
+    }
+
+    .menuItemsMobile {
+        transform: translateX(-60rem);
+        transition: all 1s ease;
+    }
+
+    .menuItem {
+        font-size: 1.1rem;
+
+    }
 }
