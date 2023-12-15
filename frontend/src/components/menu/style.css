@@ -1,0 +1,72 @@
+.menuContainer {
+    position: absolute;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    top: 7vh;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.menuContainerScrollUp {
+    transition: all 0.5s ease-in;
+    position: fixed;
+    top: 0vh;
+    background-color: rgba(0, 0, 0, 0.644);
+
+}
+
+.menuLogoImg {
+    width: 10rem;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 4rem;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+.menuItem {
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+}
+
+.hoverUnderline {
+    display: inline-block;
+    position: relative;
+    /* color: aqua; */
+}
+
+.hoverUnderline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #4D8DDD;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hoverUnderline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.active {
+    color: rgb(255, 217, 0);
+}
