@@ -1,15 +1,25 @@
 .menuContainer {
     position: absolute;
     color: white;
-    width: 100vw;
+    width: 98vw;
     height: 10vh;
     top: 7vh;
     z-index: 9;
-    /* background-color: rgba(0, 0, 0, 0.644); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 4rem;
+}
+
+.menuContainer2 {
+
+    width: 100vw;
 }
 
 .menuContainerScrollUp {
-    transition: all 0.5s ease-in;
+    /* transition: all 0.4s ease; */
     position: fixed;
     top: 0vh;
     background-color: rgba(0, 0, 0, 0.733);
@@ -18,14 +28,6 @@
 
 .menuLogoImg {
     width: 10rem;
-}
-
-.menuContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5rem 4rem;
 }
 
 .menuItems {
@@ -91,6 +93,7 @@
 
     .menuContainer {
         padding: 2.5rem 1.5rem;
+        width: 100vw;
     }
 
     .menuItems {

@@ -1,8 +1,9 @@
 import React from 'react'
 import "./style.css"
+import MarqueeComp from '../../components/marqueeComp/MarqueeComp'
 function Home() {
     return (
-        <div className='home'>Home</div>
+        <MarqueeComp />
     )
 }
 

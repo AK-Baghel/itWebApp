@@ -11,6 +11,7 @@ function Menu() {
     const location = useLocation();
     const [menuShow, setmenuShow] = useState(false)
     const [show, setShow] = useState(true);
+    const [searchToggle, setSearchToggle] = useState(true)
 
 
     const routing = (para) => {
@@ -22,7 +23,7 @@ function Menu() {
     }
 
     const scrollHandle = () => {
-        window.scrollY >= 200 ? setmenuShow(true) : "";
+        window.scrollY >= 120 ? setmenuShow(true) : "";
         window.scrollY < 30 ? setmenuShow(false) : "";
     }
 
@@ -34,7 +35,6 @@ function Menu() {
     }, [menuShow]);
 
 
-    const [searchToggle, setSearchToggle] = useState(true)
 
     useEffect(() => {
         if (!searchToggle) {
@@ -42,12 +42,12 @@ function Menu() {
         } else {
             document.body.style.overflow = 'unset'
         }
-    });
+    },);
 
 
 
     return (
-        <div className={`menuContainer ${menuShow ? 'menuContainerScrollUp' : ""}`}>
+        <div className={`menuContainer ${menuShow ? 'menuContainerScrollUp menuContainer2' : ""}`}>
             <div className="menuLogo">
                 <img className='menuLogoImg' src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo-v2.svg" alt="" />
             </div>
@@ -61,11 +61,7 @@ function Menu() {
                 <IoClose className=" menuBar menuCross" onClick={() => { toggleBar(); setSearchToggle(!searchToggle) }} />
             </div>
 
-
-
             <FaBars className="menuBar" onClick={() => { toggleBar(); setSearchToggle(!searchToggle) }} />
-
-
 
         </div>
     )
