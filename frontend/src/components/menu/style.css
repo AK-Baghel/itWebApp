@@ -1,16 +1,16 @@
 .menuContainer {
     position: absolute;
     color: white;
-    width: 98vw;
+    width: 100vw;
     height: 10vh;
     top: 7vh;
     z-index: 9;
-
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
     padding: 2.5rem 4rem;
+    background-color: rgba(0, 0, 0, 0.733);
 }
 
 .menuContainer2 {
@@ -39,7 +39,7 @@
 }
 
 .menuItem {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     cursor: pointer;
     letter-spacing: 2px;
 
@@ -85,6 +85,70 @@
     top: 2.5rem;
 }
 
+.headerPopUpBox {
+    position: absolute;
+    top: 6vh;
+    color: rgb(255, 255, 255);
+    padding-top: 1.5rem;
+    left: 5vw;
+    right: 5vw;
+    z-index: 9;
+    text-align: center;
+}
+
+.headerPopUpBoxItems {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 1rem 1rem;
+    overflow: hidden;
+    width: 90vw;
+    cursor: pointer;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.specialHover {
+    cursor: pointer;
+}
+
+.headerPopUpBoxItem:hover {
+    text-decoration: underline;
+    text-decoration-color: #008081;
+    font-weight: 400;
+}
+
+.headerPopUpBoxItem {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.9rem;
+    margin-inline: 10px;
+    margin-block: 10px;
+}
+
+.headerPopUpBoxButton {
+    color: white;
+    background-color: rgb(255, 184, 29);
+    padding: 5px;
+    width: 90vw;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.headerPopUpBoxButton:hover {
+    text-decoration: underline;
+}
+
 
 @media (max-width:850px) {
     .menuBar {
@@ -99,16 +163,19 @@
     .menuItems {
         flex-direction: column;
         position: fixed;
-        top: 0;
+        top: 0vh;
         left: 0;
         background-color: #021020;
-        /* background-color: #4D8DDD; */
         width: 100vw;
         height: 100vh;
-        gap: 3rem;
+        gap: 2rem;
         align-items: flex-start;
+        justify-content: flex-start;
         padding-inline: 2rem;
         transition: all 1s ease;
+        overflow-y: scroll;
+        /* margin-block: 2rem; */
+        padding-block: 15vh;
     }
 
     .menuItemsMobile {
@@ -120,4 +187,47 @@
         font-size: 1.1rem;
 
     }
+}
+
+@media (max-width:931px) {
+
+    .headerPopUpBox {
+        position: static;
+        color: rgb(255, 255, 255);
+        padding: 0rem;
+        animation: none;
+        left: 0vw;
+        right: 0vw;
+    }
+
+    .headerPopUpBoxItems {
+        padding: 1rem 2rem;
+        width: 80vw;
+    }
+
+    .headerPopUpBoxItems {
+        background-color: white;
+        color: rgb(65, 65, 65);
+        padding: 1rem 1rem;
+        overflow: scroll;
+        height: 50vh;
+        gap: 0.7rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .headerPopUpBoxItem {
+        width: fit-content;
+        height: fit-content;
+        font-size: 0.9rem;
+        margin-inline: 10px;
+        margin-block: 10px;
+    }
+
+    .headerPopUpBoxButton {
+        width: 80vw;
+
+    }
+
 }

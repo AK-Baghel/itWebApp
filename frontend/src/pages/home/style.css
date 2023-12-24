@@ -1,3 +1,13 @@
 .home {
     height: 200vh;
 }
+
+.homecontainer {
+    /* height: 200vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: 3rem;
+}

@@ -1,0 +1,20 @@
+.imageButtonsContainer {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    /* margin-block: 3rem; */
+}
+
+.imageButtonsBox {
+    margin-block: 0rem;
+}
+
+.imageButtonsHeadline {
+    padding: 10px;
+    margin-block: 1rem;
+    border-bottom: 2px solid #191934;
+}

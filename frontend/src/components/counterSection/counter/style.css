@@ -1,0 +1,31 @@
+.counterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    /* background-color: white; */
+    padding: 1rem;
+    gap: 0.8rem;
+    width: 11rem;
+    border-radius: 15px;
+    /* background-color: #FFB81D; */
+    /* background-color: #191934; */
+}
+
+.counterLogo {
+    font-size: 3rem;
+    /* color: #191934; */
+    /* color: #191934; */
+    /* color: rgb(223, 163, 0); */
+    color: rgb(0, 185, 185);
+}
+
+.counterText {
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.counterHeading {
+    color: gray;
+}

@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4D8DDD;
+    background-color: #FFB81D;
     text-transform: uppercase;
     cursor: grab;
 }
 
 .topCarouselDataText {
-    color: white;
+    color: black;
+    font-weight: 600;
     padding: 1rem;
     font-size: 0.8rem;
     letter-spacing: 2px;

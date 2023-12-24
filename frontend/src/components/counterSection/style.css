@@ -1,0 +1,9 @@
+.counterSectionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #F6F6F6; */
+    /* padding-block: 2rem; */
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* margin-block: 1rem; */
+}
