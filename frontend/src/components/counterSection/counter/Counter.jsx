@@ -18,7 +18,7 @@ function Counter({ value, heading, symb, logo }) {
         const currentScrollValue = window.scrollY;
         setScrollValue(currentScrollValue);
 
-        if (currentScrollValue > 300 && !hasScrolledPastThreshold) {
+        if (currentScrollValue > 100 && !hasScrolledPastThreshold) {
             setHasScrolledPastThreshold(true);
             counter();
         }

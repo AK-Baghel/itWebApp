@@ -1,13 +1,12 @@
 .footerContainer {
-    background-color: white;
-    color: blacke;
+    background-color: #191934;
+    color: white;
     padding-block: 4rem 2rem;
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
     flex-direction: column;
     gap: 2rem;
-    padding: 0.5rem;
 }
 
 .footerBox1 {
@@ -27,7 +26,8 @@
 
 .footerBox1SectionHeading {
     font-size: 1.5rem;
-    /* font-weight: 600; */
+    color: #FFB823;
+
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.712);
     width: fit-content;
@@ -52,9 +52,9 @@
 }
 
 .footerBox1SectionItem:hover {
-    color: red;
+    color: #FFAE2A;
     text-decoration: underline;
-    text-decoration-color: orange;
+    text-decoration-color: #FFAE2A;
 }
 
 .footerBox2 {
@@ -87,7 +87,7 @@
 }
 
 .footerSocial:hover {
-    color: red;
+    color: rgb(255, 246, 115);
 }
 
 .footerBox1SectionNewsLetterBox {

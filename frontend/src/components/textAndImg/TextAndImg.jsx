@@ -13,7 +13,10 @@ function TextAndImg() {
                         Driven by the top 1% of software engineering talent in India, we deliver robust, scalable, and reliable software product solutions to clients across the globe.
                     </div>
                     <div className="textAndImgDesc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mdoloremque adipisci necessitatibus porro architecto est a nihil error reprehenderit incidu.                    </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mdoloremque adipisci necessitatibus porro architecto est a nihil error reprehenderit incidu.
+                    </div>
+                    <div className="cardItemSection6 labelCard4" onClick={() => { navigate('/products'); scrollPage(); }}>Know More</div>
+
                 </div>
 
                 <div className="textAndImgBox2">

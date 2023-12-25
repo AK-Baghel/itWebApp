@@ -60,7 +60,7 @@ function Footer() {
 
             <div className="footerBox3">
                 <div className="footerBox3Text">
-                    Copyright © Cloths Finder.  All rights reserved.
+                    Copyright © Value Coders. All rights reserved.
                 </div>
                 <div className="footerBox3Socials">
                     <FaInstagramSquare className='footerSocial' />

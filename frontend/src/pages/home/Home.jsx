@@ -6,6 +6,9 @@ import LabelCard from '../../components/label/LabelCard'
 import ImageButtons from '../../components/imageButtons/ImageButtons'
 import TextAndImg from '../../components/textAndImg/TextAndImg'
 
+import AboutTile from '../../components/aboutTiles/AboutTile'
+import GoogleMap from '../../components/googleMap/GoogleMap'
+
 function Home() {
     return (
         <>
@@ -15,6 +18,8 @@ function Home() {
                 <ImageButtons />
                 <TextAndImg />
                 <MarqueeComp />
+                <AboutTile />
+                <GoogleMap />
             </div>
         </>
     )

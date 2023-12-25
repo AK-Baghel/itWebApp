@@ -1,0 +1,20 @@
+.aboutTiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    width: 100vw;
+    padding: 2rem 1rem;
+    background-color: #191934;
+}
+
+.aboutTileBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #191934;
+    justify-content: center;
+    padding: 3rem 1rem;
+    align-items: center;
+}

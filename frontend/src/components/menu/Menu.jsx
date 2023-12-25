@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { FaBars } from "react-icons/fa6"
-
 import { IoClose } from "react-icons/io5"
-
 import { useLocation, useNavigate } from "react-router-dom"
+
+import { useContext } from "react"
+import { Context } from "../../context/AppContext"
+
 import "./style.css"
 
 function Menu() {
+
+    const { value } = useContext(Context)
+
     const navigate = useNavigate();
     const location = useLocation();
     const [menuShow, setmenuShow] = useState(false)
