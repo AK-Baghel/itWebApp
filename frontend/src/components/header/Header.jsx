@@ -15,10 +15,12 @@ const Header = () => {
 
     return (
         <div className="headerContainer">
-            <TopCarousel />
             {
                 location.pathname === "/" ?
-                    <Carousel /> :
+                    <>
+                        <TopCarousel />
+                        <Carousel />:
+                    </> :
                     ""
             }
             <Menu />

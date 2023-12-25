@@ -11,3 +11,21 @@
     gap: 2rem;
     margin-block: 3rem;
 }
+
+.homeAnnotionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.homeAnnotionBox {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -30,19 +30,25 @@ function Menu() {
         setShow(!show);
     }
 
-    const scrollHandle = () => {
-        window.scrollY >= 120 ? setmenuShow(true) : "";
-        window.scrollY < 30 ? setmenuShow(false) : "";
+    // const scrollHandle = () => {
+    //     window.scrollY >= 120 ? setmenuShow(true) : "";
+    //     window.scrollY < 30 ? setmenuShow(false) : "";
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", scrollHandle);
+    //     return () => {
+    //         window.removeEventListener("scroll", scrollHandle);
+    //     };
+    // }, [menuShow]);
+
+
+    const scrollPage = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
     }
-
-    useEffect(() => {
-        window.addEventListener("scroll", scrollHandle);
-        return () => {
-            window.removeEventListener("scroll", scrollHandle);
-        };
-    }, [menuShow]);
-
-
 
     // useEffect(() => {
     //     if (!searchToggle) {
@@ -52,8 +58,8 @@ function Menu() {
     //     }
     // },);
 
-    const openPage = (value) => {
-        navigate(`/product/${value}`);
+    const openPage = (value1, value2) => {
+        navigate(`/${value1}/${value2}`);
         window.scrollTo(0, 0)
         setPopUp1(false)
         setPopUp2(false)
@@ -63,29 +69,30 @@ function Menu() {
 
 
     return (
-        <div className={`menuContainer ${menuShow ? 'menuContainerScrollUp menuContainer2' : ""}`}>
-            <div className="menuLogo">
+        // ${menuShow ? 'menuContainerScrollUp menuContainer2' : ""}
+        <div className={`menuContainer   ${location.pathname === "/" ? "" : "menuContainerForContent"}`}>
+            <div className="menuLogo" onClick={() => { routing("/"); scrollPage(); }}>
                 <img className='menuLogoImg' src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo-v2.svg" alt="" />
             </div>
 
             <div className={`menuItems ${show ? 'menuItemsMobile' : ""}`}>
-                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "active" : ""}`} onClick={() => { routing("/") }}>Home</div>
+                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "active" : ""}`} onClick={() => { routing("/"); scrollPage(); }}>Home</div>
                 <div className={`menuItem hoverUnderline specialHover ${location.pathname === "/" ? "" : ""}`} onMouseOver={() => { setPopUp1(true) }} onMouseOut={() => { setPopUp1(false) }}>Services</div>
                 {
                     popUp1 &&
                     <div className="headerPopUpBox" onMouseOver={() => { setPopUp1(true) }} onMouseOut={() => { setPopUp1(false) }}>
                         <ul className="headerPopUpBoxItems">
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("Software Product Engineering") }}>Software Product Engineering</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("Dedicated Software Teams") }}>Dedicated Software Teams</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("QA & Testing") }}>QA & Testing</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("Cloud Services") }}>Cloud Services</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("Application Development") }}>Application Development</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("eCommerce") }}>eCommerce</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("Data Engineering") }}>Data Engineering</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("AI & ML") }}>AI & ML</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("For Startups") }}>For Startups</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("For Enterprises") }}>For Enterprises</li>
-                            <li className="headerPopUpBoxItem" onClick={() => { openPage("For Agencies") }}>For Agencies</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "Software Product Engineering"); }}>Software Product Engineering</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "Dedicated Software Teams") }}>Dedicated Software Teams</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "QA & Testing") }}>QA & Testing</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "Cloud Services") }}>Cloud Services</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "Application Development") }}>Application Development</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "eCommerce") }}>eCommerce</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "Data Engineering") }}>Data Engineering</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "AI & ML") }}>AI & ML</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "For Startups") }}>For Startups</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "For Enterprises") }}>For Enterprises</li>
+                            <li className="headerPopUpBoxItem" onClick={() => { openPage("services", "For Agencies") }}>For Agencies</li>
                         </ul>
                         <div className="headerPopUpBoxButton" onClick={() => { navigate('/items'); window.scrollTo(0, 0); setPopUp1(false) }}>View All Items</div>
                     </div>
@@ -122,9 +129,9 @@ function Menu() {
                         <div className="headerPopUpBoxButton" onClick={() => { navigate('/items'); window.scrollTo(0, 0); setPopUp2(false) }}>View All Items</div>
                     </div>
                 }
-                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>Technologies</div>
-                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>About</div>
-                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/") }}>Contact Us</div>
+                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/"); scrollPage(); }}>Technologies</div>
+                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/"); scrollPage(); }}>About</div>
+                <div className={`menuItem hoverUnderline ${location.pathname === "/" ? "" : ""}`} onClick={() => { routing("/"); scrollPage(); }}>Contact</div>
                 <IoClose className=" menuBar menuCross" onClick={() => { toggleBar(); setSearchToggle(!searchToggle) }} />
             </div>
 

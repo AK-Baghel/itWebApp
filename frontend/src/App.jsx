@@ -3,6 +3,7 @@ import Header from "./components/header/Header"
 import Home from "./pages/home/Home"
 import Footer from './components/footer/Footer'
 import AppContext from './context/AppContext'
+import ContentPage from './pages/contentPage/ContentPage'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services/:title" element={<ContentPage />} />
         </Routes>
         <Footer />
       </AppContext>

@@ -16,6 +16,7 @@ function Annotions() {
                     show ? <IoIosArrowDown /> : <IoIosArrowUp />
                 }
             </div>
+
             {
                 !show
                     ?
@@ -26,6 +27,7 @@ function Annotions() {
 
                     : ""
             }
+
         </div>
     )
 }

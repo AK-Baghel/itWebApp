@@ -1,0 +1,41 @@
+.bannerContainer {
+    width: 100vw;
+    height: 80vh;
+    background: url('https://bluewhaleapps.com/wp-content/uploads/2019/06/custom-application-development.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bannerBox {
+    height: 100%;
+    background: rgba(7, 13, 31, 0.603);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.bannerTitle {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #FFB81D;
+}
+
+.bannerText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.2px;
+    color: white;
+}
+
+@media (max-width:650px) {
+    .bannerTitle {
+        font-size: 2rem;
+    }
+
+    .bannerBox {
+        padding-inline: 1.5rem;
+        padding-block: 4rem;
+    }
+}
