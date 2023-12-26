@@ -47,7 +47,7 @@
 }
 
 .menuItem {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     cursor: pointer;
     letter-spacing: 2px;
 
@@ -107,8 +107,8 @@
 .headerPopUpBoxItems {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    background-color: white;
-    color: black;
+    background-color: #191934;
+    color: white;
     padding: 1rem 1rem;
     overflow: hidden;
     width: 90vw;
@@ -129,7 +129,7 @@
 
 .headerPopUpBoxItem:hover {
     text-decoration: underline;
-    text-decoration-color: #008081;
+    text-decoration-color: #FFB81D;
     font-weight: 400;
 }
 
